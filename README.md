@@ -1,7 +1,7 @@
 # TowerDefence_hz
 
-##Loboda T
+## Loboda T
 
-##Yeremenko I
+## Yeremenko I
 
-##Fedorova M
+## Fedorova M
