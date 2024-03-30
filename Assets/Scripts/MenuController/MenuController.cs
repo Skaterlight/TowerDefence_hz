@@ -35,7 +35,7 @@ public class MenuController : MonoBehaviour
     }
     public void LoadLevelOne()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(1);
     }
     public void Quit()
     {
