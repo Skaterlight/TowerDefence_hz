@@ -2,13 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyScript : MonoBehaviour
 {
-    private int health = 200;
-    private float speed = 5f;
+    [SerializeField] private ScriptObjEnemy enemyStats;
     SpellCaster TargetSetter = new SpellCaster();
 
+    private float health;
+    private NavMeshAgent agent;
+
+    private void Start()
+    {
+        enemyStats.MainTower = GameObject.FindWithTag("MainTower");
+        health = enemyStats.Health;
+
+        agent = GetComponent<NavMeshAgent>();
+        agent.destination = enemyStats.MainTower.transform.position;
+    }
+
+    #region triggers
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Fireball")
@@ -38,4 +51,5 @@ public class EnemyScript : MonoBehaviour
             TargetSetter.Target = gameObject;
         }
     }
+    #endregion
 }
