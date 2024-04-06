@@ -13,6 +13,7 @@ public class LevelFirstUIController : MonoBehaviour
     void Start()
     {
         Panel.SetActive(false);
+        slider.value = 0;
     }
 
     // Update is called once per frame
