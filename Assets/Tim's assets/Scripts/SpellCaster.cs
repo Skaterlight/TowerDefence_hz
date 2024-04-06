@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class SpellCaster : MonoBehaviour
 {
-    [SerializeField] private ScriptObjSpell spellStats;
-
-    private float SpawnHeight = 5.3f;
+    [SerializeField] private GameObject FireballSpell;
     [SerializeField] private GameObject Caster;
+    private float SpellSpeed = 0.03f;
     private GameObject castedSpell;
     private GameObject _target;
     public GameObject Target {  get { return _target; } set { _target = value; } }
@@ -21,7 +20,7 @@ public class SpellCaster : MonoBehaviour
     {
         if(castedSpell != null && _target != null)
         {
-            castedSpell.transform.position = Vector3.Lerp(castedSpell.transform.position, _target.transform.position, spellStats.Speed);
+            castedSpell.transform.position = Vector3.Lerp(castedSpell.transform.position, _target.transform.position, SpellSpeed);
         }
     }
 
@@ -29,7 +28,7 @@ public class SpellCaster : MonoBehaviour
     {
         if(_target != null)
         {
-            castedSpell = Instantiate(spellStats.SpellPrefab, new Vector3(Caster.transform.position.x, Caster.transform.position.y + SpawnHeight, Caster.transform.position.z), Quaternion.identity);
+            castedSpell = Instantiate(FireballSpell, new Vector3(Caster.transform.position.x, Caster.transform.position.y + 2.3f, Caster.transform.position.z), Quaternion.identity);
         }
     }
 
@@ -46,7 +45,6 @@ public class SpellCaster : MonoBehaviour
         if(other.gameObject.CompareTag("Enemy") && _target != null)
         {
             _target = null;
-            if(castedSpell != null) Destroy(castedSpell);
         }
     }
 
