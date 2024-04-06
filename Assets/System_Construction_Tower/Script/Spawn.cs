@@ -3,60 +3,89 @@ using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
+//using UnityEngine.UIElements;
 
 public class Spawn : MonoBehaviour
-{
-    public GameObject bigtower;
-    public GameObject smalltower;
+{ 
     public Text TextMoney;
-
-    private int Money;
-    private const int BigTower = 2000;
-    private const int SmallTower = 500;
+    private int Money = 10000;
+    private int BigTower = 2000;
+    private int SmallTower = 500;
 
     RaycastHit hit;
     [SerializeField] private GameObject _prefab;
+    [SerializeField] private GameObject _Smallprefab;
     private Camera _mainCamera;
+    private bool PlaceBigTower = false;
+    private bool placesmalltower = false;
+
     void Start()
     {
+        TextMoney.text = Money.ToString();
         _mainCamera = Camera.main;
-        BuyTower();
+
+        Button button = GameObject.Find("ButtonBT").GetComponent<Button>();
+        button.onClick.AddListener(placebigtower);
+
+        Button button2 = GameObject.Find("ButtonMT").GetComponent<Button>();      
+        button2.onClick.AddListener(PlaceSmalltower);
     }
 
-    private void Update()
+    public void Update()
     {
-       { Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
-          if (Input.GetMouseButtonDown(0))
-          {
-            if (Physics.Raycast(ray, out hit))
+        OnButtonDown();
+    }
+    public void placebigtower()
+    {
+        PlaceBigTower = true;
+    }
+    public void PlaceSmalltower()
+    {
+        placesmalltower = true;
+
+    }
+
+    public void OnButtonDown()
+    {
+
+        if(PlaceBigTower && Input.GetMouseButtonDown(0))
+        {
+            if (Money >= BigTower)
             {
-                Vector3 PointSpavn = new Vector3(hit.point.x, hit.point.y + 0.5f, hit.point.z);
-                GameObject newObject = Instantiate(_prefab, PointSpavn, Quaternion.identity);
-                Renderer objectRenderer = newObject.GetComponent<Renderer>();
-                objectRenderer.material.color = new(hit.point.x, hit.point.y + 0.5f, hit.point.z);
+                Money -= BigTower;
+                TextMoney.text = Money.ToString();
+
+                Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
+               
+                if (Physics.Raycast(ray, out hit))
+                {
+                   Vector3 PointSpavn = new Vector3(hit.point.x, hit.point.y, hit.point.z);
+                   Instantiate(_prefab, PointSpavn, Quaternion.identity);
+                    PlaceBigTower = false;
+                }                
             }
-          }          
-       }
-    }
-    public void BuyTower()
-    {
-        if(Money >= BigTower)
-        {
-
-        }
-        
-
-    }
-
-    public void BuyTower2()
-    {
-        if (Money >= SmallTower)
-        {
-            Money -= SmallTower;
-            Instantiate(smalltower, Vector3.zero, Quaternion.identity);
         }
 
-    }
+
+
+        if (placesmalltower && Input.GetMouseButtonDown(0))
+        {
+            if (Money >= SmallTower)
+            {
+                Money -= SmallTower;
+                TextMoney.text = Money.ToString();
+
+                Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
+
+                if (Physics.Raycast(ray, out hit))
+                {
+                    Vector3 PointSpavn = new Vector3(hit.point.x, hit.point.y, hit.point.z);
+                    Instantiate(_Smallprefab, PointSpavn, Quaternion.identity);
+                    placesmalltower = false;
+                }
+            }
+        }
+    }    
 }
 
 
