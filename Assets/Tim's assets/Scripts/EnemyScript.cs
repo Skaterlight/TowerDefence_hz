@@ -19,6 +19,7 @@ public class EnemyScript : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
+        agent.speed = enemyStats.WalkSpeed;
         agent.destination = GameObject.FindWithTag("MainTower").transform.position;
         health = enemyStats.health;
     }
