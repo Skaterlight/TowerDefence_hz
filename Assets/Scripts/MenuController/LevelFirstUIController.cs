@@ -9,11 +9,13 @@ public class LevelFirstUIController : MonoBehaviour
     public Slider slider;
     public AudioSource audioSource;
     public GameObject Panel;
+    public GameObject WannaExitPanel;
     private bool soundIsActive;
     void Start()
     {
+        WannaExitPanel.SetActive(false);
         Panel.SetActive(false);
-        slider.value = 0;
+        slider.value = 0.5f;
     }
 
     // Update is called once per frame
@@ -25,9 +27,18 @@ public class LevelFirstUIController : MonoBehaviour
         }
         audioSource.volume = slider.value;
     }
-    public void LoadMainMenu()
+    public void WannaLoadMainMenu()
+    {
+        WannaExitPanel.SetActive(true);
+
+    }
+    public void NoIWillStay()
+    {
+        WannaExitPanel.SetActive(false);
+    }
+    public void YesIWillGo()
     {
         SceneManager.LoadScene(0);
     }
-    
+
 }
