@@ -4,9 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
+using System;
 
 public class MenuController : MonoBehaviour
 {
+    public AudioSource audioSource;
+    private float musicLoud; 
 
     public GameObject MainMenuPanel;
     public GameObject settingsMenuPanel;
@@ -15,6 +18,7 @@ public class MenuController : MonoBehaviour
     {
         LoadMainMenu();
     }
+
     public void LoadMainMenu()
     {
         MainMenuPanel.SetActive(true);
@@ -35,6 +39,7 @@ public class MenuController : MonoBehaviour
     }
     public void LoadLevelOne()
     {
+        
         SceneManager.LoadScene(1);
     }
     public void Quit()

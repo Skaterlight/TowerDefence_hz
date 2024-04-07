@@ -7,6 +7,7 @@ public class MenuSoundController : MonoBehaviour
 {
     public Slider slider;
     public AudioSource audioSource;
+    
     void Start()
     {
         
