@@ -11,7 +11,10 @@ public class LevelFirstUIController : MonoBehaviour
     public GameObject Panel;
     public GameObject StorePanel;
     public GameObject WannaExitPanel;
+    public Button pauseButton;
+    public string pauseText;
     private bool soundIsActive;
+    private bool isPaused;
     void Start()
     {
 
@@ -33,6 +36,25 @@ public class LevelFirstUIController : MonoBehaviour
         {
             StorePanel.SetActive(true);
         }
+        
+    }
+    public void PauseGame()
+    {
+        if (isPaused == false)
+        {
+            Time.timeScale = 0f;
+            isPaused = true;
+            Debug.Log(Time.timeScale);
+            
+        }
+        else if (isPaused == true)
+        {
+            Time.timeScale = 1.0f;
+            isPaused = false;
+            Debug.Log(Time.timeScale);
+            
+        }
+        
     }
     public void WannaLoadMainMenu()
     {
