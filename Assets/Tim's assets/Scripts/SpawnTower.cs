@@ -27,10 +27,13 @@ public class SpawnTower : MonoBehaviour
                 Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit))
                 {
-                    Vector3 pointSpawn = new Vector3(hit.point.x, hit.point.y + 2f, hit.point.z);
-                    Instantiate(_towerPrefab, pointSpawn, Quaternion.identity);
-                    Money -= TowerCost;
-                    TextMoney.text = Money.ToString();
+                    if (hit.point.y <= 3.3f)
+                    {
+                        Vector3 pointSpawn = new Vector3(hit.point.x, hit.point.y, hit.point.z);
+                        Instantiate(_towerPrefab, pointSpawn, Quaternion.identity);
+                        Money -= TowerCost;
+                        TextMoney.text = Money.ToString();
+                    }
                 }
             }
         }
