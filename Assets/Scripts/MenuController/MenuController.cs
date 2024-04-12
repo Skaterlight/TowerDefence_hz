@@ -12,6 +12,9 @@ public class MenuController : MonoBehaviour
     private float musicLoud; 
 
     public GameObject MainMenuPanel;
+    public GameObject Level1Panel;
+    public GameObject Level2Panel;
+    public GameObject Level3Panel;
     public GameObject settingsMenuPanel;
     public GameObject levelsMenuPanel;
     private void Start()
@@ -24,6 +27,9 @@ public class MenuController : MonoBehaviour
         MainMenuPanel.SetActive(true);
         settingsMenuPanel.SetActive(false);
         levelsMenuPanel.SetActive(false);
+        Level1Panel.SetActive(false);
+        Level2Panel.SetActive(false);
+        Level3Panel.SetActive(false);
     }
     public void ChooseLevel()
     {
@@ -41,6 +47,18 @@ public class MenuController : MonoBehaviour
     {
         
         SceneManager.LoadScene(1);
+    }
+    public void LoadLevel1Panel()
+    {
+        Level1Panel.SetActive(true);
+    }
+    public void LoadLevel2Panel()
+    {
+        Level2Panel.SetActive(true);
+    }
+    public void LoadLevel3Panel()
+    {
+        Level3Panel.SetActive(true);
     }
     public void Quit()
     {
