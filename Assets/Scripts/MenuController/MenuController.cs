@@ -52,6 +52,18 @@ public class MenuController : MonoBehaviour
     {
         Level1Panel.SetActive(true);
     }
+    public void CloseLevel1Panel()
+    {
+        Level1Panel.SetActive(false);
+    }
+    public void CloseLevel2Panel()
+    {
+        Level2Panel.SetActive(false);
+    }
+    public void CloseLevel3Panel()
+    {
+        Level3Panel.SetActive(false);
+    }
     public void LoadLevel2Panel()
     {
         Level2Panel.SetActive(true);
