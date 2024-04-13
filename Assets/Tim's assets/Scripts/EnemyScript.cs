@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class EnemyScript : MonoBehaviour
 {
@@ -12,16 +9,16 @@ public class EnemyScript : MonoBehaviour
     private int health;
     SpellCaster TargetSetter = new SpellCaster();
 
-    GameObject mainTower;
-    CastleScript castleScript;
+    private GameObject _mainTower;
+    private int _mainTowerHealth = 1000;
+    [SerializeField] private Text _mainTowerText;
 
     private Animator animator;
     private bool _TowerCollision = false;
 
     private void Start()
     {
-        /*mainTower = GameObject.FindWithTag("MainTower");
-        castleScript = mainTower.GetComponent<CastleScript>();*/
+        _mainTower = GameObject.FindWithTag("MainTower");
 
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
@@ -74,16 +71,14 @@ public class EnemyScript : MonoBehaviour
         if(collision.gameObject.tag == "MainTower")
         {
             _TowerCollision = true;
-            //StartCoroutine("DamageTower");
+            InvokeRepeating("DamageTower", enemyStats.attackSpeed, enemyStats.attackSpeed);
         }
     }
 
-    /*IEnumerator DamageTower()
+    private void DamageTower()
     {
-        yield return new WaitForSeconds(0.7f);
-        castleScript.Health = PlayerPrefs.GetInt("MainTowerHealth");
-        castleScript.Health -= enemyStats.damage;
-        PlayerPrefs.SetInt("MainTowerHealth", castleScript.Health);
-        yield return new WaitForSeconds(0.533f);
-    }*/
+        _mainTowerHealth -= enemyStats.damage;
+        _mainTowerText.text = _mainTowerHealth.ToString() + "hp";
+        if (_mainTowerHealth <= 0) Destroy(_mainTower);
+    }
 }
