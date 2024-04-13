@@ -5,9 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Fireball
-  - Enemy
   - MainTower
   - Tower
+  - EnemyGoblin
   layers:
   - Default
   - TransparentFX

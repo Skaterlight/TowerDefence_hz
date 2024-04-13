@@ -12,11 +12,17 @@ public class EnemyScript : MonoBehaviour
     private int health;
     SpellCaster TargetSetter = new SpellCaster();
 
+    GameObject mainTower;
+    CastleScript castleScript;
+
     private Animator animator;
     private bool _TowerCollision = false;
 
     private void Start()
     {
+        /*mainTower = GameObject.FindWithTag("MainTower");
+        castleScript = mainTower.GetComponent<CastleScript>();*/
+
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         agent.speed = enemyStats.WalkSpeed;
@@ -68,6 +74,16 @@ public class EnemyScript : MonoBehaviour
         if(collision.gameObject.tag == "MainTower")
         {
             _TowerCollision = true;
+            //StartCoroutine("DamageTower");
         }
     }
+
+    /*IEnumerator DamageTower()
+    {
+        yield return new WaitForSeconds(0.7f);
+        castleScript.Health = PlayerPrefs.GetInt("MainTowerHealth");
+        castleScript.Health -= enemyStats.damage;
+        PlayerPrefs.SetInt("MainTowerHealth", castleScript.Health);
+        yield return new WaitForSeconds(0.533f);
+    }*/
 }
