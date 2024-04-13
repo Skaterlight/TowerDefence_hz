@@ -15,6 +15,9 @@ public class LevelFirstUIController : MonoBehaviour
     public string pauseText;
     private bool soundIsActive;
     private bool isPaused;
+    private bool escChecker = true;
+
+
     void Start()
     {
 
@@ -29,7 +32,12 @@ public class LevelFirstUIController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape)) 
         { 
-          Panel.SetActive(true); 
+          Panel.SetActive(true);
+            
+            if (escChecker)
+            {
+                PauseGame();
+            }
         }
         audioSource.volume = slider.value;
         if (Input.GetKeyDown(KeyCode.M))
@@ -64,6 +72,7 @@ public class LevelFirstUIController : MonoBehaviour
     public void Resume()
     {
         Panel.SetActive(false);
+
     }
     public void NoIWillStay()
     {
