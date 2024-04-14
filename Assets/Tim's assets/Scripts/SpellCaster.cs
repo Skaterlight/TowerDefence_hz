@@ -33,7 +33,7 @@ public class SpellCaster : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("EnemyGoblin") && _target == null)
+        if(other.gameObject.CompareTag("Enemy") && _target == null)
         {
             _target = other.gameObject;
         }
@@ -41,7 +41,7 @@ public class SpellCaster : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.gameObject.CompareTag("EnemyGoblin") && _target != null)
+        if(other.gameObject.CompareTag("Enemy") && _target != null)
         {
             _target = null;
             if(castedSpell != null)
@@ -53,7 +53,7 @@ public class SpellCaster : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.CompareTag("EnemyGoblin") && _target == null)
+        if(other.gameObject.CompareTag("Enemy") && _target == null)
         {
             _target = other.gameObject;
         }

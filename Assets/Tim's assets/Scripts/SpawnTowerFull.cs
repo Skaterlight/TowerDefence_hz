@@ -1,12 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SpawnTowerFull : MonoBehaviour
 {
-    public Text TextMoney;
-    private int Money = 10000;
+    [SerializeField] private Text TextMoney;
+    private int Money = 500;
     private int BigTower = 2000;
     private int SmallTower = 500;
 
@@ -29,15 +31,15 @@ public class SpawnTowerFull : MonoBehaviour
         button2.onClick.AddListener(PlaceSmalltower);
     }
 
-    public void Update()
+    private void Update()
     {
         OnButtonDown();
     }
-    public void placebigtower()
+    private void placebigtower()
     {
         PlaceBigTower = true;
     }
-    public void PlaceSmalltower()
+    private void PlaceSmalltower()
     {
         placesmalltower = true;
 
@@ -60,8 +62,7 @@ public class SpawnTowerFull : MonoBehaviour
                         transform.rotation = Quaternion.Euler(hit.point.x, hit.point.y + 90f, hit.point.z);
                         Instantiate(_prefab, PointSpavn, Quaternion.identity);
                         PlaceBigTower = false;
-                        Money -= BigTower;
-                        TextMoney.text = Money.ToString();
+                        BuyTower(BigTower);
                     }
                 }
             }
@@ -71,10 +72,9 @@ public class SpawnTowerFull : MonoBehaviour
 
         if (placesmalltower && Input.GetMouseButtonDown(0))
         {
-            if (Money >= SmallTower)
+            if (Convert.ToInt32(TextMoney.text) >= SmallTower)
             {
-                Money -= SmallTower;
-                TextMoney.text = Money.ToString();
+                BuyTower(SmallTower);
 
                 Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
 
@@ -91,4 +91,20 @@ public class SpawnTowerFull : MonoBehaviour
         }
     }
 
+    public void BuyTower(int cost)
+    {
+        Money -= cost;
+        UpdateGold();
+    }
+
+    public void UpdateGold()
+    {
+        TextMoney.text = Money.ToString();
+    }
+
+    public void AddGold(int value)
+    {
+        Money += value;
+        UpdateGold();
+    }
 }

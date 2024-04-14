@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 381905663076244351}
   - component: {fileID: 2568188633987287395}
   - component: {fileID: 5639804480979231647}
+  - component: {fileID: -4687297781122429713}
   m_Layer: 0
   m_Name: HightTower
   m_TagString: MainTower
@@ -107,3 +108,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.261509, y: 2.9902835, z: 1.219178}
   m_Center: {x: 0.013754527, y: 1.4951417, z: 0.029659271}
+--- !u!114 &-4687297781122429713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6841229509493588195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c2a44e30ba618d4ea0bd8658b74f830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 0}

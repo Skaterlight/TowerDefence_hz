@@ -17,3 +17,4 @@ MonoBehaviour:
   health: 100
   damage: 50
   attackSpeed: 1.333
+  Cost: 200

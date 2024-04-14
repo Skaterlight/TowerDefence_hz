@@ -5,21 +5,18 @@ using UnityEngine.UI;
 public class EnemyScript : MonoBehaviour
 {
     [SerializeField] private EnemyStats enemyStats;
+    public int DoDamage => enemyStats.damage;
+    public float AttackTime => enemyStats.attackSpeed;
     private NavMeshAgent agent;
     private int health;
     SpellCaster TargetSetter = new SpellCaster();
-
-    private GameObject _mainTower;
-    private int _mainTowerHealth = 1000;
-    [SerializeField] private Text _mainTowerText;
+    SpawnTowerFull spawnTowerFull = new SpawnTowerFull();
 
     private Animator animator;
     private bool _TowerCollision = false;
 
     private void Start()
     {
-        _mainTower = GameObject.FindWithTag("MainTower");
-
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         agent.speed = enemyStats.WalkSpeed;
@@ -42,6 +39,7 @@ public class EnemyScript : MonoBehaviour
             {
                 animator.SetTrigger("Dead");
                 Destroy(gameObject, 0.85f);
+                spawnTowerFull.AddGold(50);
             }
         }
         if(other.gameObject.tag == "Tower")
@@ -71,14 +69,6 @@ public class EnemyScript : MonoBehaviour
         if(collision.gameObject.tag == "MainTower")
         {
             _TowerCollision = true;
-            InvokeRepeating("DamageTower", enemyStats.attackSpeed, enemyStats.attackSpeed);
         }
-    }
-
-    private void DamageTower()
-    {
-        _mainTowerHealth -= enemyStats.damage;
-        _mainTowerText.text = _mainTowerHealth.ToString() + "hp";
-        if (_mainTowerHealth <= 0) Destroy(_mainTower);
     }
 }
