@@ -76,8 +76,5 @@ public class MenuController : MonoBehaviour
     {
         Application.Quit();
     }
-    public void RestartLevel()
-    {
-        int getLevelIndex = SceneManager.GetActiveScene().buildIndex;
-    }
+    
 }

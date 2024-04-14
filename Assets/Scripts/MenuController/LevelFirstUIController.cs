@@ -16,6 +16,7 @@ public class LevelFirstUIController : MonoBehaviour
     private bool soundIsActive;
     private bool isPaused;
     private bool panelIsActive;
+    private int screenResolutionToChange;
 
 
     void Start()
@@ -50,8 +51,10 @@ public class LevelFirstUIController : MonoBehaviour
         {
             StorePanel.SetActive(true);
         }
+
         
     }
+
     public void RestartLevel()
     {
         int getLevelIndex = SceneManager.GetActiveScene().buildIndex;
@@ -90,9 +93,12 @@ public class LevelFirstUIController : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
-    public void OpenStore()
+    public void ChangeResolution()
     {
-
+        if (screenResolutionToChange == 1) 
+        {
+            Screen.SetResolution(1920, 1080, true);
+        }
     }
     public void BuyGun()
     {
@@ -102,5 +108,8 @@ public class LevelFirstUIController : MonoBehaviour
     {
         StorePanel.SetActive(false);
     }
-
+    public void CreenResChoose()
+    {
+        screenResolutionToChange++;
+    }
 }
