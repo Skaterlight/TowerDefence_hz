@@ -15,7 +15,7 @@ public class LevelFirstUIController : MonoBehaviour
     public string pauseText;
     private bool soundIsActive;
     private bool isPaused;
-    private bool escChecker = true;
+    private bool panelIsActive;
 
 
     void Start()
@@ -31,12 +31,18 @@ public class LevelFirstUIController : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) 
-        { 
-          Panel.SetActive(true);
-            
-            if (escChecker)
+        {
+            if (!panelIsActive)
             {
+                Panel.SetActive(true);
                 PauseGame();
+                panelIsActive = true;
+            }
+            else
+            {
+                Panel.SetActive(false);
+                ResumeGame();
+                panelIsActive = false;
             }
         }
         audioSource.volume = slider.value;
@@ -46,23 +52,25 @@ public class LevelFirstUIController : MonoBehaviour
         }
         
     }
+    public void RestartLevel()
+    {
+        int getLevelIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(getLevelIndex);
+    }
     public void PauseGame()
     {
-        if (isPaused == false)
+        if (!isPaused)
         {
             Time.timeScale = 0f;
             isPaused = true;
             Debug.Log(Time.timeScale);
-            
         }
-        else if (isPaused == true)
-        {
-            Time.timeScale = 1.0f;
-            isPaused = false;
-            Debug.Log(Time.timeScale);
-            
-        }
-        
+    }
+    public void ResumeGame()
+    {
+        Time.timeScale = 1.0f;
+        isPaused = false;
+        Debug.Log(Time.timeScale);
     }
     public void WannaLoadMainMenu()
     {
