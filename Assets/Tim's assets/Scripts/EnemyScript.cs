@@ -10,13 +10,15 @@ public class EnemyScript : MonoBehaviour
     private NavMeshAgent agent;
     private int health;
     SpellCaster TargetSetter = new SpellCaster();
-    SpawnTowerFull spawnTowerFull = new SpawnTowerFull();
+    GoldController goldController;
 
     private Animator animator;
     private bool _TowerCollision = false;
 
     private void Start()
     {
+        goldController = FindAnyObjectByType<GoldController>();
+
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         agent.speed = enemyStats.WalkSpeed;
@@ -39,7 +41,7 @@ public class EnemyScript : MonoBehaviour
             {
                 animator.SetTrigger("Dead");
                 Destroy(gameObject, 0.85f);
-                spawnTowerFull.AddGold(50);
+                goldController.AddGold(50);
             }
         }
         if(other.gameObject.tag == "Tower")
@@ -48,6 +50,7 @@ public class EnemyScript : MonoBehaviour
         }
     }
 
+    #region hide
     private void OnTriggerExit(Collider other)
     {
         if(other.gameObject.tag == "Tower" && TargetSetter.Target != null)
@@ -71,4 +74,5 @@ public class EnemyScript : MonoBehaviour
             _TowerCollision = true;
         }
     }
+    #endregion
 }

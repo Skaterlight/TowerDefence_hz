@@ -7,8 +7,10 @@ using UnityEngine.UI;
 
 public class SpawnTowerFull : MonoBehaviour
 {
-    [SerializeField] private Text TextMoney;
-    private int Money = 500;
+    GoldController goldController;
+
+    //[SerializeField] private Text TextMoney;
+    //private int Money = 500;
     private int BigTower = 2000;
     private int SmallTower = 500;
 
@@ -21,14 +23,17 @@ public class SpawnTowerFull : MonoBehaviour
 
     void Start()
     {
-        TextMoney.text = Money.ToString();
+        goldController = FindAnyObjectByType<GoldController>();
+
         _mainCamera = Camera.main;
 
+        /* error here
         Button button = GameObject.Find("ButtonBT").GetComponent<Button>();
         button.onClick.AddListener(placebigtower);
 
         Button button2 = GameObject.Find("ButtonMT").GetComponent<Button>();
         button2.onClick.AddListener(PlaceSmalltower);
+        */
     }
 
     private void Update()
@@ -50,7 +55,7 @@ public class SpawnTowerFull : MonoBehaviour
 
         if (PlaceBigTower && Input.GetMouseButtonDown(0))
         {
-            if (Money >= BigTower)
+            if (goldController.MyGold >= BigTower)
             {
                 Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
 
@@ -62,7 +67,7 @@ public class SpawnTowerFull : MonoBehaviour
                         transform.rotation = Quaternion.Euler(hit.point.x, hit.point.y + 90f, hit.point.z);
                         Instantiate(_prefab, PointSpavn, Quaternion.identity);
                         PlaceBigTower = false;
-                        BuyTower(BigTower);
+                        goldController.BuyTower(BigTower);
                     }
                 }
             }
@@ -72,10 +77,8 @@ public class SpawnTowerFull : MonoBehaviour
 
         if (placesmalltower && Input.GetMouseButtonDown(0))
         {
-            if (Convert.ToInt32(TextMoney.text) >= SmallTower)
+            if (goldController.MyGold >= SmallTower)
             {
-                BuyTower(SmallTower);
-
                 Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
 
                 if (Physics.Raycast(ray, out hit))
@@ -85,26 +88,10 @@ public class SpawnTowerFull : MonoBehaviour
                         Vector3 PointSpavn = new Vector3(hit.point.x, hit.point.y, hit.point.z);
                         Instantiate(_Smallprefab, PointSpavn, Quaternion.identity);
                         placesmalltower = false;
+                        goldController.BuyTower(SmallTower);
                     }
                 }
             }
         }
-    }
-
-    public void BuyTower(int cost)
-    {
-        Money -= cost;
-        UpdateGold();
-    }
-
-    public void UpdateGold()
-    {
-        TextMoney.text = Money.ToString();
-    }
-
-    public void AddGold(int value)
-    {
-        Money += value;
-        UpdateGold();
     }
 }

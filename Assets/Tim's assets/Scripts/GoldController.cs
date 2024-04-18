@@ -6,6 +6,7 @@ public class GoldController : MonoBehaviour
     [SerializeField] private Text _goldText;
 
     private int _myGold;
+    public int MyGold { get { return _myGold; } }
 
     private void Start()
     {
