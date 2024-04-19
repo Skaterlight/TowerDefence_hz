@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class LevelFirstUIController : MonoBehaviour
 {
-    public Slider slider;
+    [SerializeField] Slider slider;
     public AudioSource audioSource;
     public GameObject Panel;
     public GameObject StorePanel;
@@ -17,11 +17,11 @@ public class LevelFirstUIController : MonoBehaviour
     private bool isPaused;
     private bool panelIsActive;
     private int screenResolutionToChange;
-
+   
 
     void Start()
     {
-
+        
         StorePanel.SetActive(false);
         WannaExitPanel.SetActive(false);
         Panel.SetActive(false);
@@ -51,7 +51,7 @@ public class LevelFirstUIController : MonoBehaviour
         {
             StorePanel.SetActive(true);
         }
-
+        
         
     }
 
@@ -68,6 +68,10 @@ public class LevelFirstUIController : MonoBehaviour
             isPaused = true;
             Debug.Log(Time.timeScale);
         }
+    }
+    private void PlayerLost()
+    {
+
     }
     public void ResumeGame()
     {

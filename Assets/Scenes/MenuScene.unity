@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.57594895, g: 0.56488234, b: 0.47478247, a: 1}
+  m_IndirectSpecularColor: {r: 0.57594943, g: 0.56488305, b: 0.474783, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5169,6 +5169,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 408671894721953681, guid: 6fb31ed36117b644090b16ce0db2c719, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
     - target: {fileID: 424164877402598393, guid: 6fb31ed36117b644090b16ce0db2c719, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -5187,11 +5191,31 @@ PrefabInstance:
       objectReference: {fileID: 1946202986}
     - target: {fileID: 1049083134646050712, guid: 6fb31ed36117b644090b16ce0db2c719, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2293114237622569336, guid: 6fb31ed36117b644090b16ce0db2c719, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 898e19396e60c2f85af726a653820718, type: 3}
     - target: {fileID: 2661357676220360245, guid: 6fb31ed36117b644090b16ce0db2c719, type: 3}
       propertyPath: m_Name
       value: MenuCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805256501617418485, guid: 6fb31ed36117b644090b16ce0db2c719, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805256501617418485, guid: 6fb31ed36117b644090b16ce0db2c719, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805256501617418485, guid: 6fb31ed36117b644090b16ce0db2c719, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805256501617418485, guid: 6fb31ed36117b644090b16ce0db2c719, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -22.5
       objectReference: {fileID: 0}
     - target: {fileID: 3466599358960105973, guid: 6fb31ed36117b644090b16ce0db2c719, type: 3}
       propertyPath: m_Sprite
@@ -5269,6 +5293,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6118329874072113728, guid: 6fb31ed36117b644090b16ce0db2c719, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6424351786354997333, guid: 6fb31ed36117b644090b16ce0db2c719, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -5297,6 +5325,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6710895821810292981, guid: 6fb31ed36117b644090b16ce0db2c719, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6903643376201218427, guid: 6fb31ed36117b644090b16ce0db2c719, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadLevel1Panel
@@ -5309,9 +5341,21 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 7220818921044414248, guid: 6fb31ed36117b644090b16ce0db2c719, type: 3}
+      propertyPath: m_Name
+      value: 'Graphics '
+      objectReference: {fileID: 0}
     - target: {fileID: 8227123406481091599, guid: 6fb31ed36117b644090b16ce0db2c719, type: 3}
       propertyPath: m_SizeDelta.x
       value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 8390069102357185938, guid: 6fb31ed36117b644090b16ce0db2c719, type: 3}
+      propertyPath: m_text
+      value: Graphics
+      objectReference: {fileID: 0}
+    - target: {fileID: 9179733527375490676, guid: 6fb31ed36117b644090b16ce0db2c719, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
