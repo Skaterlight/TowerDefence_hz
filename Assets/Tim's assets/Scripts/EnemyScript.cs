@@ -6,7 +6,6 @@ public class EnemyScript : MonoBehaviour
 {
     [SerializeField] private EnemyStats enemyStats;
     public int DoDamage => enemyStats.damage;
-    public float AttackTime => enemyStats.attackSpeed;
     private NavMeshAgent agent;
     private int health;
     SpellCaster TargetSetter = new SpellCaster();
@@ -33,15 +32,16 @@ public class EnemyScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Fireball")
+        if(other.gameObject.tag == "Spell")
         {
-            health -= 50;
+            SpellScript spellScript = other.GetComponent<SpellScript>();
+            health -= spellScript.Damage;
             Destroy(other.gameObject);
             if( health <= 0)
             {
                 animator.SetTrigger("Dead");
-                Destroy(gameObject, 0.85f);
-                goldController.AddGold(50);
+                Destroy(gameObject/*, 0.85f*/);
+                goldController.AddGold(enemyStats.Cost);
             }
         }
         if(other.gameObject.tag == "Tower")

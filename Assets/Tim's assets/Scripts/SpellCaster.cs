@@ -19,7 +19,7 @@ public class SpellCaster : MonoBehaviour
     {
         if(castedSpell != null && _target != null)
         {
-            castedSpell.transform.position = Vector3.Lerp(castedSpell.transform.position, _target.transform.position, spellStats.speed);
+            castedSpell.transform.position = Vector3.Lerp(castedSpell.transform.position, _target.transform.position, spellStats.Speed);
         }
     }
 
@@ -27,7 +27,7 @@ public class SpellCaster : MonoBehaviour
     {
         if(_target != null)
         {
-            castedSpell = Instantiate(spellStats.spell, new Vector3(Caster.transform.position.x, Caster.transform.position.y + 5.3f, Caster.transform.position.z), Quaternion.identity);
+            castedSpell = Instantiate(spellStats.Spell, new Vector3(Caster.transform.position.x, Caster.transform.position.y + 5.3f, Caster.transform.position.z), Quaternion.identity);
         }
     }
 

@@ -20,7 +20,7 @@ public class HealthController : MonoBehaviour
         EnemyScript script = enemy.GetComponent<EnemyScript>();
         _health -= script.DoDamage;
         _text.text = _health.ToString();
-        Destroy(enemy, script.AttackTime);
+        Destroy(enemy);
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -6,7 +6,12 @@ using UnityEngine;
 
 public class SpellStats : ScriptableObject
 {
-    public GameObject spell;
-    public int damage;
-    public float speed;
+    [SerializeField] private GameObject spell;
+    public GameObject Spell => spell;
+
+    [SerializeField] private int damage;
+    public int Damage => damage;
+
+    [SerializeField] private float speed;
+    public float Speed => speed;
 }
