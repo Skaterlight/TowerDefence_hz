@@ -48,7 +48,7 @@ public class LevelFirstUIController : MonoBehaviour
             }
         }
         audioSource.volume = slider.value;
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             StorePanel.SetActive(true);
         }
@@ -112,6 +112,7 @@ public class LevelFirstUIController : MonoBehaviour
     public void BuyGun()
     {
         Debug.Log("You Bought a gun");
+        StorePanel.SetActive(false);
     }
     public void CloseStorePanel()
     {
