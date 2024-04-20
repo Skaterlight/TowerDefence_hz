@@ -59,8 +59,8 @@ public class Spawn : MonoBehaviour
                
                 if (Physics.Raycast(ray, out hit))
                 {
-                   Vector3 PointSpavn = new Vector3(hit.point.x, hit.point.y+2f, hit.point.z);               
-                    transform.rotation = Quaternion.Euler(hit.point.x, hit.point.y + 90f, hit.point.z);
+                   Vector3 PointSpavn = new Vector3(hit.point.x, hit.point.y, hit.point.z);               
+                    transform.rotation = Quaternion.Euler(hit.point.x, hit.point.y, hit.point.z);
                     Instantiate(_prefab, PointSpavn, Quaternion.identity);
                     PlaceBigTower = false;
                 }                
@@ -80,7 +80,7 @@ public class Spawn : MonoBehaviour
 
                 if (Physics.Raycast(ray, out hit))
                 {
-                    Vector3 PointSpavn = new Vector3(hit.point.x, hit.point.y+2f, hit.point.z);
+                    Vector3 PointSpavn = new Vector3(hit.point.x, hit.point.y, hit.point.z);
                     Instantiate(_Smallprefab, PointSpavn, Quaternion.identity);
                     placesmalltower = false;
                 }
