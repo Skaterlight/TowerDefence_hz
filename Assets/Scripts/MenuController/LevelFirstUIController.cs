@@ -17,8 +17,7 @@ public class LevelFirstUIController : MonoBehaviour
     private bool isPaused;
     private bool panelIsActive;
     private int screenResolutionToChange;
-    private bool canPlaceTower = false;
-   
+    
 
     void Start()
     {
