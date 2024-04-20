@@ -27,7 +27,10 @@ public class GoldController : MonoBehaviour
 
     public void BuyTower(int cost)
     {
-        _myGold -= cost;
-        UpdateGold() ;
+        if (_myGold >= cost)
+        {
+            _myGold -= cost;
+            UpdateGold();
+        }
     }
 }
