@@ -9,19 +9,20 @@ public class LevelFirstUIController : MonoBehaviour
     [SerializeField] Slider slider;
     public AudioSource audioSource;
     public GameObject Panel;
+    [SerializeField] private GameObject MainMenuPanel;
     public GameObject StorePanel;
     public GameObject WannaExitPanel;
-    public Button pauseButton;
     public string pauseText;
     private bool soundIsActive;
     private bool isPaused;
     private bool panelIsActive;
     private int screenResolutionToChange;
+    private bool canPlaceTower = false;
    
 
     void Start()
     {
-        
+        MainMenuPanel.SetActive(true);
         StorePanel.SetActive(false);
         WannaExitPanel.SetActive(false);
         Panel.SetActive(false);
@@ -68,6 +69,10 @@ public class LevelFirstUIController : MonoBehaviour
             isPaused = true;
             Debug.Log(Time.timeScale);
         }
+    }
+    public void BuyTower() 
+    { 
+    
     }
     private void PlayerLost()
     {
