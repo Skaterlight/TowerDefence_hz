@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class Spawn : MonoBehaviour
 { 
     public Text TextMoney;
-    private int Money = 10000;
+    private int Money = 100000;
     private int BigTower = 2000;
     private int SmallTower = 500;
 
@@ -52,17 +52,22 @@ public class Spawn : MonoBehaviour
         {
             if (Money >= BigTower)
             {
-                Money -= BigTower;
-                TextMoney.text = Money.ToString();
+               
 
                 Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
                
                 if (Physics.Raycast(ray, out hit))
                 {
-                   Vector3 PointSpavn = new Vector3(hit.point.x, hit.point.y, hit.point.z);               
-                    transform.rotation = Quaternion.Euler(hit.point.x, hit.point.y, hit.point.z);
+                  if(hit.point.y >= 540.345f)
+                  {
+                    Vector3 PointSpavn = new Vector3(hit.point.x, hit.point.y, hit.point.z);               
+                   // transform.rotation = Quaternion.Euler(hit.point.x, hit.point.y, hit.point.z);
                     Instantiate(_prefab, PointSpavn, Quaternion.identity);
                     PlaceBigTower = false;
+                        Money -= BigTower;
+                        TextMoney.text = Money.ToString();
+                  }
+                  
                 }                
             }
         }
@@ -73,16 +78,21 @@ public class Spawn : MonoBehaviour
         {
             if (Money >= SmallTower)
             {
-                Money -= SmallTower;
-                TextMoney.text = Money.ToString();
+               
 
                 Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
 
                 if (Physics.Raycast(ray, out hit))
                 {
-                    Vector3 PointSpavn = new Vector3(hit.point.x, hit.point.y, hit.point.z);
-                    Instantiate(_Smallprefab, PointSpavn, Quaternion.identity);
-                    placesmalltower = false;
+                    if(hit.point.y >= 540.345f)
+                    { 
+                      Vector3 PointSpavn = new Vector3(hit.point.x, hit.point.y, hit.point.z);
+                      Instantiate(_Smallprefab, PointSpavn, Quaternion.identity);
+                      placesmalltower = false;
+                        Money -= SmallTower;
+                        TextMoney.text = Money.ToString();
+                    }
+                   
                 }
             }
         }
