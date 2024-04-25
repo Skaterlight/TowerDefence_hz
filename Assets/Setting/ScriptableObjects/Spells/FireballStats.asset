@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: FireballStats
   m_EditorClassIdentifier: 
   spell: {fileID: 3610798289059483630, guid: fb6c5410719b8fc4d8e9da8de0df485f, type: 3}
-  damage: 50
+  damage: 70
   speed: 0.08
