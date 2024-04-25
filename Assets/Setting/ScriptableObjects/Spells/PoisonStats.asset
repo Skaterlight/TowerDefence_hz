@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 771168a203ec18a409b661ca55e57b0b, type: 3}
   m_Name: PoisonStats
   m_EditorClassIdentifier: 
-  spell: {fileID: 0}
-  damage: 0
-  speed: 0
+  spell: {fileID: 1771372136537589461, guid: d1af395d055c3044b8caf4d4541655a6, type: 3}
+  damage: 50
+  speed: 0.08
+  lasting: 3

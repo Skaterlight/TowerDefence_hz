@@ -14,4 +14,7 @@ public class SpellStats : ScriptableObject
 
     [SerializeField] private float speed;
     public float Speed => speed;
+
+    [SerializeField] private int lasting;
+    public int Lasting => lasting;
 }
