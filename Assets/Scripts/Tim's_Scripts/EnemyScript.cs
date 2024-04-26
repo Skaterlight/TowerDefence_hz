@@ -10,7 +10,6 @@ public class EnemyScript : MonoBehaviour
     public int DoDamage => enemyStats.damage;
     private NavMeshAgent agent;
     private int health;
-    private int repeatPoison = 0;
     SpellCaster TargetSetter = new SpellCaster();
     GoldController goldController;
 
@@ -35,10 +34,10 @@ public class EnemyScript : MonoBehaviour
                 Destroy(other.gameObject);
                 CheckHealth();
             }
-            if(spellScript.Lasting != 0) 
+            else 
             {
                 Destroy(other.gameObject);
-                StartCoroutine(TakePoison(spellScript.Damage, spellScript.Lasting));
+                StartCoroutine(TakePoison(spellScript.Damage, spellScript.Lasting, 0));
             }
         }
         if(other.gameObject.tag == "Tower")
@@ -47,15 +46,13 @@ public class EnemyScript : MonoBehaviour
         }
     }
 
-    IEnumerator TakePoison(int Damage, int ToRepeat)
+    IEnumerator TakePoison(int Damage, int ToRepeat, int Repeated)
     {
         health -= Damage;
         CheckHealth();
-        repeatPoison++;
-        if(repeatPoison == ToRepeat)
+        if(Repeated == ToRepeat)
         {
-            StopCoroutine(TakePoison(Damage, ToRepeat));
-            repeatPoison = 0;
+            StopCoroutine(TakePoison(Damage, ToRepeat, Repeated));
         }
         yield return new WaitForSeconds(1);
     }
