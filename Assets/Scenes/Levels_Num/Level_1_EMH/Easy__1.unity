@@ -4243,6 +4243,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2788442943079542973, guid: 5f347880fad95cd4dbe2d1d05e4cf7d6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3223363510224882217, guid: 5f347880fad95cd4dbe2d1d05e4cf7d6, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -4255,9 +4259,27 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6510639967918608175, guid: 5f347880fad95cd4dbe2d1d05e4cf7d6, type: 3}
+      propertyPath: m_Text
+      value: 'Big Tower
+
+        Damage: 200'
+      objectReference: {fileID: 0}
     - target: {fileID: 6592352375058359866, guid: 5f347880fad95cd4dbe2d1d05e4cf7d6, type: 3}
       propertyPath: m_Name
       value: MenuCanvas Level1 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6790001090899263943, guid: 5f347880fad95cd4dbe2d1d05e4cf7d6, type: 3}
+      propertyPath: m_Text
+      value: 'Tower
+
+        Damage: 100'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416052321804603282, guid: 5f347880fad95cd4dbe2d1d05e4cf7d6, type: 3}
+      propertyPath: m_Text
+      value: 'SomethingElse
+
+        Damage: 150'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
