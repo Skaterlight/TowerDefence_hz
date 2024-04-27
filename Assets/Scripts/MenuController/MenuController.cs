@@ -48,6 +48,16 @@ public class MenuController : MonoBehaviour
         
         SceneManager.LoadScene(1);
     }
+    public void LoadLevelTwo()
+    {
+
+        SceneManager.LoadScene(2);
+    }
+    public void LoadLevelThree()
+    {
+
+        SceneManager.LoadScene(3);
+    }
     public void LoadLevel1Panel()
     {
         Level1Panel.SetActive(true);

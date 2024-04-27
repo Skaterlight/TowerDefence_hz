@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.57594943, g: 0.56488305, b: 0.474783, a: 1}
+  m_IndirectSpecularColor: {r: 0.57594895, g: 0.56488234, b: 0.47478247, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -547,13 +547,40 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 80219621255373477, guid: b9d76aaf786189d4f91493a957d00525, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 670980157478628534, guid: b9d76aaf786189d4f91493a957d00525, type: 3}
+      propertyPath: m_Text
+      value: 'Level 3
+
+
+        Difficulty Level: Hard
+
+
+        Types of enemies:
+        4'
+      objectReference: {fileID: 0}
+    - target: {fileID: 820450386124800622, guid: b9d76aaf786189d4f91493a957d00525, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 981305123628715122, guid: b9d76aaf786189d4f91493a957d00525, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1588899940387506092, guid: b9d76aaf786189d4f91493a957d00525, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1701544819913211711, guid: b9d76aaf786189d4f91493a957d00525, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2056669357421559226, guid: b9d76aaf786189d4f91493a957d00525, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2578033916443652397, guid: b9d76aaf786189d4f91493a957d00525, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -583,9 +610,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2870590136587063960, guid: b9d76aaf786189d4f91493a957d00525, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLevelThree
+      objectReference: {fileID: 0}
     - target: {fileID: 3104314327558639226, guid: b9d76aaf786189d4f91493a957d00525, type: 3}
       propertyPath: m_Text
       value: High
+      objectReference: {fileID: 0}
+    - target: {fileID: 5424940199648309134, guid: b9d76aaf786189d4f91493a957d00525, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7480142806901408737, guid: b9d76aaf786189d4f91493a957d00525, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLevelTwo
       objectReference: {fileID: 0}
     - target: {fileID: 7725402328008744948, guid: b9d76aaf786189d4f91493a957d00525, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
