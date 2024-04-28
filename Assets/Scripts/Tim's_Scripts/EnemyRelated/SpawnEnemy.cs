@@ -42,7 +42,7 @@ public class SpawnEnemy : MonoBehaviour
             enemiesSpawned = 0;
             CancelInvoke("SpawnEnemies");
             invokeRunning = false;
-            if(waveCount < MaxEnemies.Length) InvokeRepeating("SpawnEnemies", 5f, 1f);
+            if(waveCount < MaxEnemies.Length) InvokeRepeating("SpawnEnemies", 20f, 1f);
         }
     }
 }
