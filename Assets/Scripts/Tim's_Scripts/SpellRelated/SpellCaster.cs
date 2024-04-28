@@ -12,7 +12,7 @@ public class SpellCaster : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("SpawnFireball", 1f, 1.5f);
+        InvokeRepeating("SpawnFireball", 1f, 1f);
     }
 
     private void Update()

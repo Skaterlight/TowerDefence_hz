@@ -71,5 +71,52 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 16d57e41ee327af4fa62a643ac03e416, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4860934649063688272}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 16d57e41ee327af4fa62a643ac03e416, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4087146460735980336}
   m_SourcePrefab: {fileID: 100100000, guid: 16d57e41ee327af4fa62a643ac03e416, type: 3}
+--- !u!1 &8207149478618718304 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 16d57e41ee327af4fa62a643ac03e416, type: 3}
+  m_PrefabInstance: {fileID: 9017560117353438513}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-4860934649063688272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8207149478618718304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
+--- !u!114 &4087146460735980336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8207149478618718304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d60c54458a16b8947abc145a8a492e27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 8272943599224061573, guid: 47b41978aba272c47ae5f4a2f7179c61, type: 3}
+  - {fileID: 1696834749189059949, guid: 4a46e821c58b5cd42b14eaab6d197266, type: 3}
+  - {fileID: 4534650044859064705, guid: 24d4168561b8deb4d902c9e77f05eeff, type: 3}
+  MaxEnemies: 140000001e00000032000000

@@ -21,6 +21,7 @@ public class HealthController : MonoBehaviour
         _health -= script.DoDamage;
         _text.text = _health.ToString();
         Destroy(enemy);
+        //if(_health <= 0) Destroy(gameObject);
     }
 
     private void OnCollisionEnter(Collision collision)
