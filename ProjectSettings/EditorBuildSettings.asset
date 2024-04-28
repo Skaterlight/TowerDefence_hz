@@ -18,57 +18,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels_Num/Level_1_EMH/Easy__1.unity
     guid: 35c06d5967ace3d40a098eae63b2d13c
   - enabled: 0
-    path: Assets/Scenes/Levels_Num/Level_1_EMH/Middel__1__.unity
-    guid: 0c4a6c36422eb6544821f31e68614741
-  - enabled: 0
-    path: Assets/Scenes/Levels_Num/Level_1_EMH/Hard__1_.unity
-    guid: 9e9f1d88980a9ea4d8fc6fdc4a072e18
-  - enabled: 0
     path: Assets/Scenes/Selecting_Levels.unity
     guid: 5313ed1edc21f004e85d1850c8572f21
   - enabled: 1
     path: Assets/Scenes/Levels_Num/Level_2_EMH/Easy_2.unity
     guid: 67f832c09c2cfdb41b4c3784a79790e4
-  - enabled: 0
-    path: Assets/Scenes/Levels_Num/Level_2_EMH/Middle_2.unity
-    guid: 10599120239c97c41b798bb67629a438
-  - enabled: 0
-    path: Assets/Scenes/Levels_Num/Level_2_EMH/Hard_2.unity
-    guid: 6c3f613ba232d3f4fa2f164464bbd4df
   - enabled: 1
     path: Assets/Scenes/Levels_Num/Level_3_EMH/Easy_3.unity
     guid: ce5be74e8e18f9e4d920b1d8662e8322
-  - enabled: 0
-    path: Assets/Scenes/Levels_Num/Level_3_EMH/Middle_3.unity
-    guid: 14bec8c38e1fa58478220d06bfe8959f
-  - enabled: 0
-    path: Assets/Scenes/Levels_Num/Level_3_EMH/Hard_3.unity
-    guid: 973d37e6f7afd954eaa0d86eba571690
   - enabled: 1
     path: Assets/Scenes/Levels_Num/Level_4_EMH/Easy_4.unity
     guid: 1c5779349498e8946b749340311fd0e0
-  - enabled: 0
-    path: Assets/Scenes/Levels_Num/Level_4_EMH/Middle_4.unity
-    guid: 43ef53ed4e138184d83f89ef89787312
-  - enabled: 0
-    path: Assets/Scenes/Levels_Num/Level_4_EMH/Hard_4.unity
-    guid: 91290f41afd5db34ba21586dec713135
-  - enabled: 0
-    path: Assets/Scenes/Levels_Num/Level_5_EMH/Easy_5.unity
-    guid: dd7dc25066d64514e99a293df4b68b08
-  - enabled: 0
-    path: Assets/Scenes/Levels_Num/Level_5_EMH/Middle_5.unity
-    guid: 1a804a0121b7ef74d8ac7b51a8962ac3
-  - enabled: 0
-    path: Assets/Scenes/Levels_Num/Level_5_EMH/Hard_5.unity
-    guid: ce5f0752d6e0aad40888f3f26eb1cce8
-  - enabled: 0
-    path: Assets/Scenes/Levels_Num/Level_6_EMH/Easy_6.unity
-    guid: 2dc403dd803ee6c479349104af41db35
-  - enabled: 1
-    path: Assets/Scenes/Levels_Num/Level_6_EMH/Middle_6.unity
-    guid: a04c9a1402ff20b4493501dd06b46cf5
-  - enabled: 1
-    path: Assets/Scenes/Levels_Num/Level_6_EMH/Hard_6.unity
-    guid: e007d60d8c157244d9c1bb667740f053
   m_configObjects: {}
