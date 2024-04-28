@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Spell
   - Fireball
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - Water
   - UI
   - Road
-  - 
+  - Platform
   - 
   - 
   - 

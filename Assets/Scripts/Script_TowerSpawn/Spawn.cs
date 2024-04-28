@@ -58,10 +58,10 @@ public class Spawn : MonoBehaviour
                
                 if (Physics.Raycast(ray, out hit))
                 {
-                  if(hit.point.y >= 540.345f)
+                  if(hit.collider.gameObject.name == "Platform")
                   {
                     Vector3 PointSpavn = new Vector3(hit.point.x, hit.point.y, hit.point.z);               
-                   // transform.rotation = Quaternion.Euler(hit.point.x, hit.point.y, hit.point.z);
+                   // transform.rotation = Quaternion.Euler(hit.point.x-28.572f, hit.point.y, hit.point.z);
                     Instantiate(_prefab, PointSpavn, Quaternion.identity);
                     PlaceBigTower = false;
                         Money -= BigTower;
@@ -84,10 +84,11 @@ public class Spawn : MonoBehaviour
 
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if(hit.point.y >= 540.345f)
+                    if(hit.collider.gameObject.name == "Platform")
                     { 
                       Vector3 PointSpavn = new Vector3(hit.point.x, hit.point.y, hit.point.z);
-                      Instantiate(_Smallprefab, PointSpavn, Quaternion.identity);
+                       // transform.rotation = Quaternion.Euler(hit.point.x - 28.572f, hit.point.y, hit.point.z);
+                        Instantiate(_Smallprefab, PointSpavn, Quaternion.identity);
                       placesmalltower = false;
                         Money -= SmallTower;
                         TextMoney.text = Money.ToString();

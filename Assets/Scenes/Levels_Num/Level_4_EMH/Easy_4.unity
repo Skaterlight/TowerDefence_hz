@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 24111418}
   - component: {fileID: 24111417}
   m_Layer: 0
-  m_Name: Cube (7)
+  m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1172,7 +1172,7 @@ GameObject:
   - component: {fileID: 186781365}
   - component: {fileID: 186781364}
   m_Layer: 0
-  m_Name: Cube (14)
+  m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1473,7 +1473,7 @@ GameObject:
   - component: {fileID: 252079105}
   - component: {fileID: 252079104}
   m_Layer: 0
-  m_Name: Cube (13)
+  m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1971,14 +1971,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 351519062}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13664494, y: -0, z: -0, w: 0.9906201}
-  m_LocalPosition: {x: 992.21, y: 1112.79, z: 597.8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.12499347, y: -0, z: -0, w: 0.9921576}
+  m_LocalPosition: {x: 992.21, y: 1099.7, z: 586.1}
+  m_LocalScale: {x: 0.86743, y: 0.86743, z: 0.86743}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 718888731}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 15.708, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 14.361, y: 0, z: 0}
 --- !u!4 &362439675 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4838866880481952, guid: 13f1670c2e187874784d0f667f9057f5, type: 3}
@@ -2408,7 +2407,7 @@ GameObject:
   - component: {fileID: 486745199}
   - component: {fileID: 486745198}
   m_Layer: 0
-  m_Name: Cube (17)
+  m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3572,7 +3571,7 @@ GameObject:
   - component: {fileID: 699254716}
   - component: {fileID: 699254715}
   m_Layer: 0
-  m_Name: Cube (16)
+  m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3668,11 +3667,6 @@ MeshFilter:
 Transform:
   m_CorrespondingSourceObject: {fileID: 211060118000718597, guid: a8cc610235c43164cb7d9665673d0322, type: 3}
   m_PrefabInstance: {fileID: 656305362}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &718888731 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7506877616586126279, guid: 91a9045559d65f64ab031b14c621f09f, type: 3}
-  m_PrefabInstance: {fileID: 1791228375}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &723222114 stripped
 Transform:
@@ -5325,7 +5319,7 @@ GameObject:
   - component: {fileID: 1027309289}
   - component: {fileID: 1027309288}
   m_Layer: 0
-  m_Name: Cube (12)
+  m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6367,7 +6361,7 @@ GameObject:
   - component: {fileID: 1188346099}
   - component: {fileID: 1188346098}
   m_Layer: 0
-  m_Name: Cube (8)
+  m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6529,7 +6523,7 @@ GameObject:
   - component: {fileID: 1213330859}
   - component: {fileID: 1213330858}
   m_Layer: 0
-  m_Name: Cube (11)
+  m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8193,7 +8187,7 @@ GameObject:
   - component: {fileID: 1644015827}
   - component: {fileID: 1644015826}
   m_Layer: 0
-  m_Name: Cube (10)
+  m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9150,11 +9144,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 351519065}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 203567741873387938, guid: 91a9045559d65f64ab031b14c621f09f, type: 3}
       propertyPath: m_Name
       value: Level_3.
+      objectReference: {fileID: 0}
+    - target: {fileID: 629952836656372139, guid: 91a9045559d65f64ab031b14c621f09f, type: 3}
+      propertyPath: m_Name
+      value: Platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024336803297651296, guid: 91a9045559d65f64ab031b14c621f09f, type: 3}
+      propertyPath: m_Text
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1161394091474838360, guid: 91a9045559d65f64ab031b14c621f09f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9190,27 +9192,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7506877616586126279, guid: 91a9045559d65f64ab031b14c621f09f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.34344482
+      value: 992.55347
       objectReference: {fileID: 0}
     - target: {fileID: 7506877616586126279, guid: 91a9045559d65f64ab031b14c621f09f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -379.09314
+      value: 540.345
       objectReference: {fileID: 0}
     - target: {fileID: 7506877616586126279, guid: 91a9045559d65f64ab031b14c621f09f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 430.61682
+      value: 635.86676
       objectReference: {fileID: 0}
     - target: {fileID: 7506877616586126279, guid: 91a9045559d65f64ab031b14c621f09f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.92442477
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7506877616586126279, guid: 91a9045559d65f64ab031b14c621f09f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.38136455
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7506877616586126279, guid: 91a9045559d65f64ab031b14c621f09f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7506877616586126279, guid: 91a9045559d65f64ab031b14c621f09f, type: 3}
       propertyPath: m_LocalRotation.z
@@ -9818,7 +9820,7 @@ GameObject:
   - component: {fileID: 1837662638}
   - component: {fileID: 1837662637}
   m_Layer: 0
-  m_Name: Cube (15)
+  m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10700,7 +10702,7 @@ GameObject:
   - component: {fileID: 2058446278}
   - component: {fileID: 2058446277}
   m_Layer: 0
-  m_Name: Cube (9)
+  m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11046,3 +11048,4 @@ SceneRoots:
   - {fileID: 351519065}
   - {fileID: 2120667502}
   - {fileID: 585629369}
+  - {fileID: 1791228375}
