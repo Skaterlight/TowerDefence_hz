@@ -3215,7 +3215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8075d46711e431e4aa3d88e9fdfdae99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 1048586877261964242, guid: d44e8df71d9f7de45a84a4c850b271cb, type: 3}
+  _prefab: {fileID: 7595355429211675600, guid: dd8446268b5eeea4887daf397d69c59a, type: 3}
   _Smallprefab: {fileID: 1048586877261964242, guid: d44e8df71d9f7de45a84a4c850b271cb, type: 3}
 --- !u!114 &1656888538
 MonoBehaviour:
@@ -3244,7 +3244,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.08
+  m_VoxelSize: 0.2
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 160ae73938a59b54ba2b1f09f242040d, type: 2}
   m_BuildHeightMesh: 0
