@@ -64,7 +64,6 @@ public class SpawnTowerFull : MonoBehaviour
                     if (hit.point.y <= 3.3f)
                     {
                         Vector3 PointSpavn = new Vector3(hit.point.x, hit.point.y, hit.point.z);
-                        transform.rotation = Quaternion.Euler(hit.point.x, hit.point.y + 90f, hit.point.z);
                         Instantiate(_prefab, PointSpavn, Quaternion.identity);
                         PlaceBigTower = false;
                         goldController.BuyTower(BigTower);
