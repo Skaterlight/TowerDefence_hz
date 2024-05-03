@@ -17,3 +17,4 @@ MonoBehaviour:
   health: 100
   damage: 50
   Cost: 200
+  Sound: {fileID: 8300000, guid: 31b59ffdee516ae4cae57187510d31bc, type: 3}

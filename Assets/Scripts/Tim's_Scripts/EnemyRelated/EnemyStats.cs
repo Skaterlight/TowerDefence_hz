@@ -11,4 +11,5 @@ public class EnemyStats : ScriptableObject
     public int health;
     public int damage;
     public int Cost;
+    public AudioClip Sound;
 }

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class EnemyScript : MonoBehaviour
 {
+    private AudioSource audioSource;
     [SerializeField] private EnemyStats enemyStats;
     public int DoDamage => enemyStats.damage;
     private NavMeshAgent agent;
@@ -15,8 +16,9 @@ public class EnemyScript : MonoBehaviour
 
     private void Start()
     {
+        audioSource = gameObject.GetComponent<AudioSource>();
+        audioSource.Play();
         goldController = FindAnyObjectByType<GoldController>();
-
         agent = GetComponent<NavMeshAgent>();
         agent.speed = enemyStats.WalkSpeed;
         agent.destination = GameObject.FindWithTag("MainTower").transform.position;
@@ -28,17 +30,9 @@ public class EnemyScript : MonoBehaviour
         if(other.gameObject.tag == "Spell")
         {
             SpellScript spellScript = other.GetComponent<SpellScript>();
-            if (spellScript.Lasting == 0)
-            {
-                health -= spellScript.Damage;
-                Destroy(other.gameObject);
-                CheckHealth();
-            }
-            else 
-            {
-                Destroy(other.gameObject);
-                StartCoroutine(TakePoison(spellScript.Damage, spellScript.Lasting, 0));
-            }
+            health -= spellScript.Damage;
+            Destroy(other.gameObject);
+            CheckHealth();
         }
         if(other.gameObject.tag == "Tower")
         {
@@ -46,21 +40,11 @@ public class EnemyScript : MonoBehaviour
         }
     }
 
-    IEnumerator TakePoison(int Damage, int ToRepeat, int Repeated)
-    {
-        health -= Damage;
-        CheckHealth();
-        if(Repeated == ToRepeat)
-        {
-            StopCoroutine(TakePoison(Damage, ToRepeat, Repeated));
-        }
-        yield return new WaitForSeconds(1);
-    }
-
     private void CheckHealth()
     {
         if (health <= 0)
         {
+            audioSource.Play();
             Destroy(gameObject);
             goldController.AddGold(enemyStats.Cost);
         }
