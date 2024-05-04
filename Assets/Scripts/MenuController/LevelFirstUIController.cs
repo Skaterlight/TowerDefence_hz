@@ -22,7 +22,6 @@ public class LevelFirstUIController : MonoBehaviour
     void Start()
     {
         MainMenuPanel.SetActive(true);
-        StorePanel.SetActive(false);
         WannaExitPanel.SetActive(false);
         Panel.SetActive(false);
         slider.value = 0.5f;
@@ -47,10 +46,7 @@ public class LevelFirstUIController : MonoBehaviour
             }
         }
         audioSource.volume = slider.value;
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            StorePanel.SetActive(true);
-        }
+        
         
         
     }
@@ -69,10 +65,7 @@ public class LevelFirstUIController : MonoBehaviour
             Debug.Log(Time.timeScale);
         }
     }
-    public void BuyTower() 
-    { 
     
-    }
     private void PlayerLost()
     {
 
@@ -108,17 +101,7 @@ public class LevelFirstUIController : MonoBehaviour
             Screen.SetResolution(1920, 1080, true);
         }
     }
-    public void BuyGun()
-    {
-        Debug.Log("You Bought a gun");
-        StorePanel.SetActive(false);
-    }
-    public void CloseStorePanel()
-    {
-        StorePanel.SetActive(false);
-    }
-    public void CreenResChoose()
-    {
-        screenResolutionToChange++;
-    }
+    
+    
+    
 }
