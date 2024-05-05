@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class LoseWinController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private GameObject LosePanel;
+    [SerializeField] private GameObject WinPanel;
     void Start()
     {
-        
+        LosePanel.SetActive(false);
+        WinPanel.SetActive(false);
     }
 
-    // Update is called once per frame
+    private void Lose()
+    {
+        LosePanel.SetActive(true);
+    }
+    private void Win()
+    {
+        WinPanel.SetActive(true);
+    }
     void Update()
     {
         
