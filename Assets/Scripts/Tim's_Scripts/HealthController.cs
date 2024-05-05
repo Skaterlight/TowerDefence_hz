@@ -8,8 +8,8 @@ public class HealthController : MonoBehaviour
     [SerializeField] private Text _text;
     public LoseWinController _loseController;
 
-    private int _health;
 
+    private int _health;
     private void Start()
     {
         _health = 1000;
