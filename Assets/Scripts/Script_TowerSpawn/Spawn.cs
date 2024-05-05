@@ -23,12 +23,6 @@ public class Spawn : MonoBehaviour
     {
         TextMoney.text = Money.ToString();
         _mainCamera = Camera.main;
-
-        Button button = GameObject.Find("ButtonBT").GetComponent<Button>();
-        button.onClick.AddListener(placebigtower);
-
-        Button button2 = GameObject.Find("ButtonMT").GetComponent<Button>();      
-        button2.onClick.AddListener(PlaceSmalltower);
     }
 
     public void Update()
@@ -58,28 +52,21 @@ public class Spawn : MonoBehaviour
                
                 if (Physics.Raycast(ray, out hit))
                 {
-                  if(hit.collider.gameObject.name == "Platform")
-                  {
-                    Vector3 PointSpavn = new Vector3(hit.point.x, hit.point.y, hit.point.z);               
-                   // transform.rotation = Quaternion.Euler(hit.point.x-28.572f, hit.point.y, hit.point.z);
-                    Instantiate(_prefab, PointSpavn, Quaternion.identity);
-                    PlaceBigTower = false;
-                        Money -= BigTower;
-                        TextMoney.text = Money.ToString();
-                  }
-                  
+                    if(hit.collider.gameObject.name == "Platform")
+                    {
+                        Vector3 PointSpavn = new Vector3(hit.point.x, hit.point.y, hit.point.z);               
+                        Instantiate(_prefab, PointSpavn, Quaternion.identity);
+                        PlaceBigTower = false;
+                            Money -= BigTower;
+                            TextMoney.text = Money.ToString();
+                    }
                 }                
             }
         }
-
-
-
         if (placesmalltower && Input.GetMouseButtonDown(0))
         {
             if (Money >= SmallTower)
             {
-               
-
                 Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
 
                 if (Physics.Raycast(ray, out hit))
@@ -87,7 +74,7 @@ public class Spawn : MonoBehaviour
                     if(hit.collider.gameObject.name == "Platform")
                     { 
                       Vector3 PointSpavn = new Vector3(hit.point.x, hit.point.y, hit.point.z);
-                       // transform.rotation = Quaternion.Euler(hit.point.x - 28.572f, hit.point.y, hit.point.z);
+                       
                         Instantiate(_Smallprefab, PointSpavn, Quaternion.identity);
                       placesmalltower = false;
                         Money -= SmallTower;

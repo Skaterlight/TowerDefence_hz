@@ -10,7 +10,6 @@ public class LevelFirstUIController : MonoBehaviour
     public AudioSource audioSource;
     public GameObject Panel;
     [SerializeField] private GameObject MainMenuPanel;
-    public GameObject StorePanel;
     public GameObject WannaExitPanel;
     public string pauseText;
     private bool soundIsActive;
