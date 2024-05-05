@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class Spawn : MonoBehaviour
 { 
     public Text TextMoney;
-    private int Money = 2000;
+    private int Money = 5000;
     private int BigTower = 2000;
     private int SmallTower = 500;
 
