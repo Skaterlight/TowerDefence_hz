@@ -22,7 +22,7 @@ public class LoseWinController : MonoBehaviour
         int sceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(sceneIndex + 1);
     }
-    private void Win()
+    public void Win()
     {
         WinPanel.SetActive(true);
     }
