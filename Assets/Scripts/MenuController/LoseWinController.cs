@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LoseWinController : MonoBehaviour
 {
@@ -12,16 +13,18 @@ public class LoseWinController : MonoBehaviour
         WinPanel.SetActive(false);
     }
 
-    private void Lose()
+    public void Lose()
     {
         LosePanel.SetActive(true);
+    }
+    public void NextLevel()
+    {
+        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(sceneIndex + 1);
     }
     private void Win()
     {
         WinPanel.SetActive(true);
     }
-    void Update()
-    {
-        
-    }
+    
 }

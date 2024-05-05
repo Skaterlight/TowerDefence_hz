@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class HealthController : MonoBehaviour
 {
     [SerializeField] private Text _text;
+    public LoseWinController _loseController;
 
     private int _health;
 
@@ -14,7 +15,13 @@ public class HealthController : MonoBehaviour
         _health = 1000;
         _text.text = _health.ToString();
     }
-
+    private void Update()
+    {
+        if (_health <= 0) 
+        {
+            _loseController.Lose();
+        }
+    }
     private void UpdateHealth(GameObject enemy)
     {
         EnemyScript script = enemy.GetComponent<EnemyScript>();

@@ -93,13 +93,7 @@ public class LevelFirstUIController : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
-    public void ChangeResolution()
-    {
-        if (screenResolutionToChange == 1) 
-        {
-            Screen.SetResolution(1920, 1080, true);
-        }
-    }
+    
     
     
     
