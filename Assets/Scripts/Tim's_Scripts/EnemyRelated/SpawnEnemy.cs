@@ -19,30 +19,41 @@ public class SpawnEnemy : MonoBehaviour
     {
         invokeRunning = true;
 
-        if(enemiesSpawned % 10 == 0 && enemiesSpawned != 0)
+        if (MaxEnemies[waveCount] != 0)
         {
-            Instantiate(enemies[2], new Vector3(transform.position.x + 2f, transform.position.y + 4f, transform.position.z),
-                Quaternion.identity);
-        }
-        else if(enemiesSpawned % 5 == 0 && enemiesSpawned != 0)
-        {
-            Instantiate(enemies[1], new Vector3(transform.position.x + 2f, transform.position.y + 4f, transform.position.z),
-                Quaternion.identity);
+            if (enemiesSpawned % 10 == 0 && enemiesSpawned != 0)
+            {
+                Instantiate(enemies[2], new Vector3(transform.position.x + 2f, transform.position.y + 4f, transform.position.z),
+                    Quaternion.identity);
+            }
+            else if (enemiesSpawned % 5 == 0 && enemiesSpawned != 0)
+            {
+                Instantiate(enemies[1], new Vector3(transform.position.x + 2f, transform.position.y + 4f, transform.position.z),
+                    Quaternion.identity);
+            }
+            else
+            {
+                Instantiate(enemies[0], new Vector3(transform.position.x + 2f, transform.position.y + 4f, transform.position.z),
+                    Quaternion.identity);
+            }
+
+            enemiesSpawned++;
+
+            if (MaxEnemies[waveCount] == enemiesSpawned)
+            {
+                waveCount++;
+                enemiesSpawned = 0;
+                CancelInvoke("SpawnEnemies");
+                invokeRunning = false;
+                if (waveCount < MaxEnemies.Length) InvokeRepeating("SpawnEnemies", 20f, 1f);
+            }
         }
         else
         {
-            Instantiate(enemies[0], new Vector3(transform.position.x + 2f, transform.position.y + 4f, transform.position.z),
-                Quaternion.identity);
-        }
-
-        enemiesSpawned++;
-        if (MaxEnemies[waveCount] == enemiesSpawned)
-        {
             waveCount++;
-            enemiesSpawned = 0;
             CancelInvoke("SpawnEnemies");
             invokeRunning = false;
-            if(waveCount < MaxEnemies.Length) InvokeRepeating("SpawnEnemies", 20f, 1f);
+            if (waveCount < MaxEnemies.Length) InvokeRepeating("SpawnEnemies", 30f, 1f);
         }
     }
 }
