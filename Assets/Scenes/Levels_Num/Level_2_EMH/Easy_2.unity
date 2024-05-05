@@ -8531,59 +8531,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.9999998, y: 1.9999999, z: 2.0000005}
   m_Center: {x: -0.000000923872, y: 0, z: 0}
---- !u!1 &1072078301
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1072078303}
-  - component: {fileID: 1072078302}
-  m_Layer: 0
-  m_Name: MainTower
-  m_TagString: MainTower
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &1072078302
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072078301}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.9598007, y: 3.7425537, z: 7.8727717}
-  m_Center: {x: -1.0003712, y: 1.3712769, z: 0.11789347}
---- !u!4 &1072078303
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072078301}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.44619772, z: 0, w: 0.89493436}
-  m_LocalPosition: {x: 940.74, y: 569.51, z: 92.75}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 53, z: 0}
 --- !u!1001 &1078230085
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16975,6 +16922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1730604195}
   - component: {fileID: 1730604194}
+  - component: {fileID: 1730604196}
   m_Layer: 0
   m_Name: MainTower
   m_TagString: MainTower
@@ -17018,6 +16966,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 55.967, z: 0}
+--- !u!114 &1730604196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730604193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c2a44e30ba618d4ea0bd8658b74f830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 0}
 --- !u!1001 &1738036452
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20523,4 +20484,3 @@ SceneRoots:
   - {fileID: 1476822262}
   - {fileID: 711516047}
   - {fileID: 1366050766}
-  - {fileID: 1072078303}

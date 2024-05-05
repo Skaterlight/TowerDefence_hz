@@ -12,7 +12,7 @@ public class SpellCaster : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("SpawnFireball", 1f, 1f);
+        InvokeRepeating("SpawnFireball", 0.8f, 0.8f);
     }
 
     private void Update()
@@ -27,7 +27,7 @@ public class SpellCaster : MonoBehaviour
     {
         if(_target != null)
         {
-            castedSpell = Instantiate(spellStats.Spell, new Vector3(Caster.transform.position.x, Caster.transform.position.y + 5.3f, Caster.transform.position.z), Quaternion.identity);
+            castedSpell = Instantiate(spellStats.Spell, new Vector3(Caster.transform.position.x, Caster.transform.position.y + 4.3f, Caster.transform.position.z), Quaternion.identity);
         }
     }
 
