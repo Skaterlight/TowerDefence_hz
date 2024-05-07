@@ -16,6 +16,7 @@ public class LoseWinController : MonoBehaviour
     public void Lose()
     {
         LosePanel.SetActive(true);
+        Time.timeScale = 0f;
     }
     public void NextLevel()
     {
@@ -25,6 +26,7 @@ public class LoseWinController : MonoBehaviour
     public void Win()
     {
         WinPanel.SetActive(true);
+        Time.timeScale = 0f;
     }
     
 }
