@@ -8,6 +8,7 @@ public class LevelFirstUIController : MonoBehaviour
 {
     [SerializeField] Slider slider;
     public AudioSource audioSource;
+    public AudioSource buttonSoundSource;
     public GameObject Panel;
     [SerializeField] private GameObject MainMenuPanel;
     public GameObject WannaExitPanel;
@@ -64,7 +65,10 @@ public class LevelFirstUIController : MonoBehaviour
             Debug.Log(Time.timeScale);
         }
     }
-    
+    public void ButtonPressed() 
+    {
+        buttonSoundSource.Play();
+    }
     private void PlayerLost()
     {
 
