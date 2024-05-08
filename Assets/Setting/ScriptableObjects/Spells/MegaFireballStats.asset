@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spell: {fileID: 5455173119478780741, guid: 4b0625bfd414d28419a049f499b9477d, type: 3}
   damage: 150
-  speed: 0.07
+  speed: 0.09
   lasting: 0
