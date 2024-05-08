@@ -20,11 +20,11 @@ public class HealthController : MonoBehaviour
         if (_health <= 0) 
         {
             LoseWinController _loseController = GetComponent<LoseWinController>();
-            
+            _loseController.Lose();
+
             if (_loseController == null)
             {
-                Debug.Log("Bad");
-                _loseController.Lose();
+                Debug.Log("Bad");    
             }
         }
     }
