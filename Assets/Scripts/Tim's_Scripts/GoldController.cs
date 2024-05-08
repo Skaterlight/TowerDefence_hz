@@ -10,7 +10,7 @@ public class GoldController : MonoBehaviour
 
     private void Start()
     {
-        _myGold = 500;
+        _myGold = 1000;
         UpdateGold();
     }
 

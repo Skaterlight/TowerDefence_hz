@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 
 public class Spawn : MonoBehaviour
-{ 
-    public Text TextMoney;
-    private int Money = 5000;
+{
+    GoldController goldController;
+    
     private int BigTower = 2000;
     private int SmallTower = 500;
 
@@ -21,7 +21,7 @@ public class Spawn : MonoBehaviour
 
     void Start()
     {
-        TextMoney.text = Money.ToString();
+        goldController = FindAnyObjectByType<GoldController>();
         _mainCamera = Camera.main;
     }
 
@@ -44,7 +44,7 @@ public class Spawn : MonoBehaviour
 
         if(PlaceBigTower && Input.GetMouseButtonDown(0))
         {
-            if (Money >= BigTower)
+            if (goldController.MyGold >= BigTower)
             {
                
 
@@ -57,15 +57,14 @@ public class Spawn : MonoBehaviour
                         Vector3 PointSpavn = new Vector3(hit.point.x, hit.point.y, hit.point.z);               
                         Instantiate(_prefab, PointSpavn, Quaternion.identity);
                         PlaceBigTower = false;
-                            Money -= BigTower;
-                            TextMoney.text = Money.ToString();
+                        goldController.BuyTower(BigTower);
                     }
                 }                
             }
         }
         if (placesmalltower && Input.GetMouseButtonDown(0))
         {
-            if (Money >= SmallTower)
+            if (goldController.MyGold >= SmallTower)
             {
                 Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
 
@@ -77,8 +76,7 @@ public class Spawn : MonoBehaviour
                        
                         Instantiate(_Smallprefab, PointSpavn, Quaternion.identity);
                       placesmalltower = false;
-                        Money -= SmallTower;
-                        TextMoney.text = Money.ToString();
+                        goldController.BuyTower(SmallTower);
                     }
                    
                 }
