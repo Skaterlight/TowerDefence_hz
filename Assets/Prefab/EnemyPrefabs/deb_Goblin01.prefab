@@ -212,10 +212,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8272943599223628453}
   - component: {fileID: 8272943599214529815}
-  - component: {fileID: 2303435034855466157}
   - component: {fileID: 189100905769591519}
   - component: {fileID: -8081931440578843681}
   - component: {fileID: -5249125468278844504}
+  - component: {fileID: 1639529682038352432}
   m_Layer: 0
   m_Name: deb_Goblin01
   m_TagString: Enemy
@@ -262,27 +262,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!65 &2303435034855466157
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8272943599224061573}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.6984794, y: 1.4076538, z: 0.81098807}
-  m_Center: {x: -0.014957905, y: 0.61679685, z: -0.00069612265}
 --- !u!54 &189100905769591519
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -345,6 +324,29 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &1639529682038352432
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8272943599224061573}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.23482049
+  m_Height: 1.2473795
+  m_Direction: 1
+  m_Center: {x: -0.013505876, y: 0.6262293, z: 0}
 --- !u!1 &8272943599224061575
 GameObject:
   m_ObjectHideFlags: 0

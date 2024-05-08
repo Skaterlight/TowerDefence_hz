@@ -316,8 +316,8 @@ GameObject:
   - component: {fileID: 1116371902028168016}
   - component: {fileID: 5258010634671130360}
   - component: {fileID: -4687595049678792823}
-  - component: {fileID: -2641568332713160566}
   - component: {fileID: -5719194871414731034}
+  - component: {fileID: 3602890146208131233}
   m_Layer: 0
   m_Name: mini simple skeleton demo
   m_TagString: Enemy
@@ -406,27 +406,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &-2641568332713160566
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1696834749189059949}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.746099, y: 1.4908111, z: 0.83675766}
-  m_Center: {x: -0.042849462, y: 0.7286717, z: -0.033970397}
 --- !u!195 &-5719194871414731034
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -449,6 +428,29 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &3602890146208131233
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696834749189059949}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.32459378
+  m_Height: 1.5525144
+  m_Direction: 1
+  m_Center: {x: 0.0008113384, y: 0.7296998, z: 0}
 --- !u!1 &1818926580354158373
 GameObject:
   m_ObjectHideFlags: 0
