@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class Spawn : MonoBehaviour
+public class Spawn : Sounds_For_Scenes 
 {
     GoldController goldController;
     
@@ -56,6 +56,7 @@ public class Spawn : MonoBehaviour
                     {
                         Vector3 PointSpavn = new Vector3(hit.point.x, hit.point.y, hit.point.z);               
                         Instantiate(_prefab, PointSpavn, Quaternion.identity);
+                      //  PlaySound(sounds[0]);
                         PlaceBigTower = false;
                         goldController.BuyTower(BigTower);
                     }
@@ -72,10 +73,10 @@ public class Spawn : MonoBehaviour
                 {
                     if(hit.collider.gameObject.name == "Platform")
                     { 
-                      Vector3 PointSpavn = new Vector3(hit.point.x, hit.point.y, hit.point.z);
-                       
+                      Vector3 PointSpavn = new Vector3(hit.point.x, hit.point.y, hit.point.z);                 
                         Instantiate(_Smallprefab, PointSpavn, Quaternion.identity);
-                      placesmalltower = false;
+                      //  PlaySound(sounds[0]);
+                        placesmalltower = false;
                         goldController.BuyTower(SmallTower);
                     }
                    
