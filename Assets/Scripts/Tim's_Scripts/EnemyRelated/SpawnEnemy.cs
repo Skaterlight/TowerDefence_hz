@@ -5,10 +5,10 @@ using UnityEngine;
 public class SpawnEnemy : MonoBehaviour
 {
     [SerializeField] private GameObject[] enemies;
+    [SerializeField] private GameObject WinCanvas;
     [SerializeField] private int[] MaxEnemies;
     private int waveCount = 0;
     private int enemiesSpawned = 0;
-    private bool invokeRunning;
 
     private void Start()
     {
@@ -17,8 +17,6 @@ public class SpawnEnemy : MonoBehaviour
 
     private void SpawnEnemies()
     {
-        invokeRunning = true;
-
         if (MaxEnemies[waveCount] != 0)
         {
             if (enemiesSpawned % 10 == 0 && enemiesSpawned != 0)
@@ -41,19 +39,31 @@ public class SpawnEnemy : MonoBehaviour
 
             if (MaxEnemies[waveCount] == enemiesSpawned)
             {
-                waveCount++;
                 enemiesSpawned = 0;
                 CancelInvoke("SpawnEnemies");
-                invokeRunning = false;
-                if (waveCount < MaxEnemies.Length) InvokeRepeating("SpawnEnemies", 20f, 1f);
+                if (waveCount < MaxEnemies.Length && MaxEnemies[waveCount + 1] != 0)
+                {
+                    InvokeRepeating("SpawnEnemies", 20f, 1f);
+                }
+                if(waveCount < MaxEnemies.Length && MaxEnemies[waveCount + 1] == 0)
+                {
+                    WinCanvas.SetActive(true);
+                }
+                waveCount++;
             }
         }
         else
         {
             waveCount++;
             CancelInvoke("SpawnEnemies");
-            invokeRunning = false;
-            if (waveCount < MaxEnemies.Length) InvokeRepeating("SpawnEnemies", 30f, 1f);
+            if (waveCount < MaxEnemies.Length)
+            {
+                InvokeRepeating("SpawnEnemies", 30f, 1f);
+            }
+            if(waveCount == MaxEnemies.Length)
+            {
+                WinCanvas.SetActive(true);
+            }
         }
     }
 }
