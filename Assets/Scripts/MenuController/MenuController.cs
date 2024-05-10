@@ -10,7 +10,7 @@ public class MenuController : MonoBehaviour
 {
     public AudioSource audioSource;
     private float musicLoud; 
-
+    public AudioSource buttonSound;
     public GameObject MainMenuPanel;
     public GameObject Level1Panel;
     public GameObject Level2Panel;
@@ -21,7 +21,10 @@ public class MenuController : MonoBehaviour
     {
         LoadMainMenu();
     }
-
+    public void ButtonPressed()
+    {
+        buttonSound.Play();
+    }
     public void LoadMainMenu()
     {
         MainMenuPanel.SetActive(true);
