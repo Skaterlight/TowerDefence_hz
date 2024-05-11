@@ -7,42 +7,32 @@ public class HealthController : MonoBehaviour
 {
     [SerializeField] private Text _text;
 
-    
+    LoseWinController _loseController;
+
+
     private int _health;
     private void Start()
     {
+        _loseController = FindAnyObjectByType<LoseWinController>();
+
         _health = 1000;
         _text.text = _health.ToString();
-    }
-    private void Update()
-    {
-        
-        if (_health <= 0) 
-        {
-            LoseWinController _loseController = GetComponent<LoseWinController>();
-            _loseController.Lose();
-
-            if (_loseController == null)
-            {
-                Debug.Log("Bad");    
-            }
-        }
-    }
-   
-    private void UpdateHealth(GameObject enemy)
-    {
-        EnemyScript script = enemy.GetComponent<EnemyScript>();
-        _health -= script.DoDamage;
-        _text.text = _health.ToString();
-        Destroy(enemy);
-        //if(_health <= 0) Destroy(gameObject);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Enemy")
+        if(collision.gameObject.TryGetComponent<EnemyScript>(out EnemyScript enemy))
         {
-            UpdateHealth(collision.gameObject);
+            EnemyScript script = enemy.GetComponent<EnemyScript>();
+            _health -= script.DoDamage;
+            _text.text = _health.ToString();
+            Destroy(enemy.gameObject);
+
+            if(_health <= 0)
+            {
+                _health = 0;
+                _loseController.Lose();
+            }
         }
     }
 }
