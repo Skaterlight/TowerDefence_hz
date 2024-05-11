@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.57594943, g: 0.56488305, b: 0.474783, a: 1}
+  m_IndirectSpecularColor: {r: 0.57594895, g: 0.56488234, b: 0.47478247, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -761,6 +761,17 @@ PrefabInstance:
     - target: {fileID: 820450386124800622, guid: b9d76aaf786189d4f91493a957d00525, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 924400860497092142, guid: b9d76aaf786189d4f91493a957d00525, type: 3}
+      propertyPath: m_Text
+      value: 'Level 1
+
+
+        Difficulty Level: Easy
+
+
+        Types of enemies:
+        3'
       objectReference: {fileID: 0}
     - target: {fileID: 981305123628715122, guid: b9d76aaf786189d4f91493a957d00525, type: 3}
       propertyPath: m_IsActive
