@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
 {
+    LoseWinController loseWinController;
     [SerializeField] private GameObject[] enemies;
-    [SerializeField] private GameObject WinCanvas;
     [SerializeField] private int[] MaxEnemies;
     private int waveCount = 0;
     private int enemiesSpawned = 0;
 
     private void Start()
     {
+        loseWinController = FindAnyObjectByType<LoseWinController>();
+
         InvokeRepeating("SpawnEnemies", 3f, 1f);
     }
 
@@ -45,9 +47,9 @@ public class SpawnEnemy : MonoBehaviour
                 {
                     InvokeRepeating("SpawnEnemies", 20f, 1f);
                 }
-                if(waveCount < MaxEnemies.Length && MaxEnemies[waveCount + 1] == 0)
+                if(waveCount == MaxEnemies.Length)
                 {
-                    WinCanvas.SetActive(true);
+                    StartCoroutine("ShowWin");
                 }
                 waveCount++;
             }
@@ -62,8 +64,19 @@ public class SpawnEnemy : MonoBehaviour
             }
             if(waveCount == MaxEnemies.Length)
             {
-                WinCanvas.SetActive(true);
+                loseWinController.Win();
             }
         }
+    }
+
+    IEnumerator ShowWin()
+    {
+        if(GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
+        {
+            StopCoroutine("ShowWin");
+            loseWinController.Win();
+        }
+
+        yield return null;
     }
 }
