@@ -26,11 +26,11 @@ public class SpawnEnemy : MonoBehaviour
     {
         if (MaxEnemies[waveCount] != 0)
         {
-            if (enemiesSpawned % 10 == 0 && enemiesSpawned != 0)
+            if (MaxEnemies[waveCount] % 10 == 0 && MaxEnemies[waveCount] != 0)
             {
                 Instantiate(enemies[2], _spawnPosition, Quaternion.identity);
             }
-            else if (enemiesSpawned % 5 == 0 && enemiesSpawned != 0)
+            else if (MaxEnemies[waveCount] % 5 == 0 && MaxEnemies[waveCount] != 0)
             {
                 Instantiate(enemies[1], _spawnPosition, Quaternion.identity);
             }
@@ -43,7 +43,6 @@ public class SpawnEnemy : MonoBehaviour
 
             if (MaxEnemies[waveCount] <= 0)
             {
-                enemiesSpawned = 0;
                 CancelInvoke("SpawnEnemies");
                 waveCount++;
 
