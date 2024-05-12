@@ -13184,6 +13184,10 @@ PrefabInstance:
       propertyPath: WinCanvas
       value: 
       objectReference: {fileID: 1691401548}
+    - target: {fileID: 4087146460735980336, guid: 9a816f81ce5d2364cb54773d1ee70643, type: 3}
+      propertyPath: MaxEnemies.Array.data[0]
+      value: 19
+      objectReference: {fileID: 0}
     - target: {fileID: 8207149478618718304, guid: 9a816f81ce5d2364cb54773d1ee70643, type: 3}
       propertyPath: m_Name
       value: PortalTwo
