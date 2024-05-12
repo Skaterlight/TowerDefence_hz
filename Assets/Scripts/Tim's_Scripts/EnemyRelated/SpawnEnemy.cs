@@ -43,7 +43,7 @@ public class SpawnEnemy : MonoBehaviour
             {
                 enemiesSpawned = 0;
                 CancelInvoke("SpawnEnemies");
-                if (waveCount < MaxEnemies.Length && MaxEnemies[waveCount + 1] != 0)
+                if (waveCount < MaxEnemies.Length)
                 {
                     InvokeRepeating("SpawnEnemies", 20f, 1f);
                 }
