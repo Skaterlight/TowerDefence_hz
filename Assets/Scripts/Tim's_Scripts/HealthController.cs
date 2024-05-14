@@ -14,6 +14,7 @@ public class HealthController : MonoBehaviour
     private void Start()
     {
         _loseController = FindAnyObjectByType<LoseWinController>();
+        if (_loseController != null) Debug.Log("Is null");
 
         _health = 1000;
         _text.text = _health.ToString();
