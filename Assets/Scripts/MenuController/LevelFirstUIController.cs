@@ -26,7 +26,7 @@ public class LevelFirstUIController : MonoBehaviour
         MainMenuPanel.SetActive(true);
         WannaExitPanel.SetActive(false);
         Panel.SetActive(false);
-        slider.value = 0.5f;
+        slider.value = 0.2f;
     }
 
     // Update is called once per frame
