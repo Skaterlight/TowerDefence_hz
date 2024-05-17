@@ -27577,6 +27577,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab Mega Tower
       objectReference: {fileID: 0}
+    - target: {fileID: 6336035004045261457, guid: 04e22cbe8fafdf34088b8872a186e327, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6527533068077972733, guid: 04e22cbe8fafdf34088b8872a186e327, type: 3}
       propertyPath: m_LocalPosition.x
       value: -173.4
