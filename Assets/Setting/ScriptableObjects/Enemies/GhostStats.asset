@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 0}
   WalkSpeed: 4
-  health: 500
-  damage: 150
-  Cost: 750
+  health: 975
+  damage: 400
+  Cost: 100
