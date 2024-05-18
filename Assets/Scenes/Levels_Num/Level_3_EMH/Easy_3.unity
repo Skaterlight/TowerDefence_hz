@@ -543,6 +543,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 1447647895532146427, guid: f2090380af2578342b080d0382c15c0e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2132902266652471273, guid: f2090380af2578342b080d0382c15c0e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -760,15 +764,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 824910469}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.26121008, y: -0, z: -0, w: 0.965282}
-  m_LocalPosition: {x: 945, y: 583.14355, z: 68.37488}
+  m_LocalRotation: {x: 0.41459814, y: -0, z: -0, w: 0.9100047}
+  m_LocalPosition: {x: 945, y: 595.8, z: 74.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 656086559}
   - {fileID: 1945075452}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 30.284, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 48.988, y: 0, z: 0}
 --- !u!82 &824910473
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1746,6 +1750,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7645234070568232729, guid: 91a9045559d65f64ab031b14c621f09f, type: 3}
+    - {fileID: 5379527140204629415, guid: 91a9045559d65f64ab031b14c621f09f, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91a9045559d65f64ab031b14c621f09f, type: 3}
