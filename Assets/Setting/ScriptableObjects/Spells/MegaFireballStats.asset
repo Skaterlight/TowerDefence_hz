@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 771168a203ec18a409b661ca55e57b0b, type: 3}
   m_Name: MegaFireballStats
   m_EditorClassIdentifier: 
-  spell: {fileID: 5455173119478780741, guid: 4b0625bfd414d28419a049f499b9477d, type: 3}
+  spell: {fileID: 1555643509235600269, guid: 391e78bb4a2085347b81c70c57afdf18, type: 3}
   damage: 150
   speed: 0.09
   lasting: 0

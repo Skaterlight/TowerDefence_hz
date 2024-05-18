@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 771168a203ec18a409b661ca55e57b0b, type: 3}
   m_Name: FireballStats
   m_EditorClassIdentifier: 
-  spell: {fileID: 3610798289059483630, guid: fb6c5410719b8fc4d8e9da8de0df485f, type: 3}
+  spell: {fileID: 1555643509235600269, guid: 391e78bb4a2085347b81c70c57afdf18, type: 3}
   damage: 75
   speed: 0.1
   lasting: 0
