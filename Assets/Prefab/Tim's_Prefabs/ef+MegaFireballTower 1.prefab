@@ -19527,7 +19527,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 187918, guid: 77a599bd67f72e24999e1d5d60f433d0, type: 3}
       propertyPath: m_Name
-      value: MegaFireballTower 1
+      value: ef+MegaFireballTower 1
       objectReference: {fileID: 0}
     - target: {fileID: 187918, guid: 77a599bd67f72e24999e1d5d60f433d0, type: 3}
       propertyPath: m_TagString
@@ -19645,8 +19645,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 2.7
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Radius: 2.53
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &3765882254275574813
 AudioSource:
   m_ObjectHideFlags: 0
